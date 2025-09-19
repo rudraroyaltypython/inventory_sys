@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}Sales{% endblock %}
+
+{% block content %}
+<h2>Sales</h2>
+
+<table class="table table-bordered table-striped table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Customer</th>
+            <th>Date</th>
+            <th>Total Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for sale in sales %}
+        <tr>
+            <td>{{ sale.id }}</td>
+            <td>
+                {% if sale.customer %}
+                {{ sale.customer.name }}
+                {% else %}
+                Walk-in
+                {% endif %}
+            </td>
+            <td>{{ sale.date }}</td>
+            <td>{{ sale.total_amount }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="4" class="text-center">No sales found.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

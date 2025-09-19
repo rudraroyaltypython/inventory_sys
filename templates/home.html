@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-3 mb-3">
+        <div class="card text-center border-0 bg-info text-white">
+            <div class="card-body">
+                <h5 class="card-title">Inventory</h5>
+                <p class="card-text">Manage products & stock</p>
+                <a href="{% url 'product_list' %}" class="btn btn-light btn-sm">Go</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+        <div class="card text-center border-0 bg-success text-white">
+            <div class="card-body">
+                <h5 class="card-title">Sales</h5>
+                <p class="card-text">Invoices & billing</p>
+                <a href="#" class="btn btn-light btn-sm">Go</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+        <div class="card text-center border-0 bg-warning text-dark">
+            <div class="card-body">
+                <h5 class="card-title">Purchases</h5>
+                <p class="card-text">Suppliers & orders</p>
+                <a href="#" class="btn btn-dark btn-sm">Go</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+        <div class="card text-center border-0 bg-danger text-white">
+            <div class="card-body">
+                <h5 class="card-title">Accounting</h5>
+                <p class="card-text">Ledger & credits</p>
+                <a href="#" class="btn btn-light btn-sm">Go</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

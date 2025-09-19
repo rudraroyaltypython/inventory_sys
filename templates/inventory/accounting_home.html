@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Accounting{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+        <div class="card text-center mb-3 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Total Purchases</h5>
+                <p class="card-text">{{ total_purchases|default:"0" }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-center mb-3 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Total Sales</h5>
+                <p class="card-text">{{ total_sales|default:"0" }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-center mb-3 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Net Balance</h5>
+                <p class="card-text">{{ net_balance|default:"0" }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
